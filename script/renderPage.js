@@ -54,6 +54,8 @@ search.addEventListener('submit', e => {
     searchTitle.textContent = searchWrapper.children.length ?
     `По вашему запросу “${request}” найдено ${searchWrapper.children.length}
     результатов` : 'По вашему запросу ничего не найдено';
+
+    search.reset();
   });
 });
 
