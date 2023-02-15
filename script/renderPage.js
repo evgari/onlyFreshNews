@@ -17,7 +17,14 @@ headlinesWrapper.className = 'container card-wrapper card-wrapper_headlines';
 
 headlinesTitle.textContent = 'Свежие новости';
 
-const searchRequest = (request) => {
+const select = document.querySelector('#lang');
+let lang = select.value;
+
+select.addEventListener('change', () => {
+  lang = select.value;
+});
+
+const searchRequest = (request, lang) => {
   preload.show();
 
   return Promise.all([
@@ -27,7 +34,7 @@ const searchRequest = (request) => {
       },
       callback: renderCards,
     }),
-    fetchRequest('top-headlines?country=ru&pageSize=4', {
+    fetchRequest(`top-headlines?country=${lang}&pageSize=4`, {
       headers: {
         'X-Api-Key': '794883d9246d476aa1d793f5fc5f259c',
       },
@@ -44,7 +51,7 @@ search.addEventListener('submit', e => {
   searchWrapper.innerHTML = '';
   headlinesWrapper.innerHTML = '';
 
-  searchRequest(request).then(data => {
+  searchRequest(request, lang).then(data => {
     preload.remove();
 
     searchWrapper.append(data[0]);
@@ -59,10 +66,10 @@ search.addEventListener('submit', e => {
   });
 });
 
-const init = () => {
+const init = (lang) => {
   preload.show();
 
-  fetchRequest(`top-headlines?country=ru&pageSize=8`, {
+  fetchRequest(`top-headlines?country=${lang}&pageSize=8`, {
     headers: {
       'X-Api-Key': '794883d9246d476aa1d793f5fc5f259c',
     },
@@ -75,5 +82,5 @@ const init = () => {
       });
 };
 
-init();
+init(lang);
 
