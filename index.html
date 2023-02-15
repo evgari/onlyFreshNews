@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only fresh news</title>
+  <link rel="preload" href="fonts/roboto-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/style.css">
+
+  <script src="script/index.js" type="module"></script>
+</head>
+
+<body>
+  <div class="site-container">
+    <h1 class="visually-hidden">Only fresh news - новостной портал</h1>
+
+    <header class="header">
+      <div class="container header__container">
+        <img class="header__logo logo" src="image/icons/logo.svg" alt="Логотип Only fresh news">
+  
+        <form class="search header__form">
+          <input type="search" class="search__input" name="input" placeholder="Россия">
+          <button class="search__btn" type="submit">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.0996 15.1287L18.785 17.8127C18.9102 17.9424 18.9795 18.1161 18.9779 18.2963C18.9764 18.4766 18.9041 18.649 18.7766 18.7765C18.6491 18.904 18.4767 18.9763 18.2964 18.9778C18.1162 18.9794 17.9425 18.9101 17.8129 18.7849L15.1275 16.0995C13.3727 17.603 11.1037 18.3683 8.79673 18.235C6.48976 18.1016 4.32411 17.0799 2.7542 15.3843C1.1843 13.6886 0.332184 11.4508 0.376657 9.14037C0.421131 6.82998 1.35874 4.62661 2.99273 2.99261C4.62673 1.35862 6.8301 0.421008 9.14049 0.376535C11.4509 0.332062 13.6887 1.18418 15.3844 2.75408C17.08 4.32399 18.1018 6.48964 18.2351 8.79661C18.3685 11.1036 17.6031 13.3725 16.0996 15.1274V15.1287ZM9.31261 16.875C11.3183 16.875 13.2419 16.0782 14.6601 14.66C16.0783 13.2417 16.8751 11.3182 16.8751 9.31249C16.8751 7.30679 16.0783 5.38324 14.6601 3.96499C13.2419 2.54675 11.3183 1.74999 9.31261 1.74999C7.30691 1.74999 5.38336 2.54675 3.96512 3.96499C2.54687 5.38324 1.75011 7.30679 1.75011 9.31249C1.75011 11.3182 2.54687 13.2417 3.96512 14.66C5.38336 16.0782 7.30691 16.875 9.31261 16.875Z"/>
+            </svg>
+          </button>
+        </form>
+  
+        <div class="header__select">
+          <select class="select" name="lang">
+            <option value="ru">Россия</option>
+          </select>
+          <svg width="16" height="8" viewBox="0 0 16 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.916748 0.166656L8.00008 7.24999L15.0834 0.166656H0.916748Z"/>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <img class="footer__logo logo" src="image/icons/logo.svg" alt="Логотип Only fresh news">
+  
+        <div class="footer__copy">© 2020-2022 News</div>
+  
+        <ul class="footer__socials">
+          <li class="footer__socials-item">
+            <a href="#" class="footer__socials-link footer__socials-link_tw" aria-label="Мы в Twitter"></a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="#" class="footer__socials-link footer__socials-link_hb" aria-label="Мы в Habr"></a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="#" class="footer__socials-link footer__socials-link_vk" aria-label="Мы во В контакте"></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
